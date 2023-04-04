@@ -39,7 +39,22 @@ app.post('/publish', (req, res) => {
 
 // Execute
 app.post('/execute', (req, res) => {
-    console.log(res);
+    const logger = arguments.log; // objeto logger passado como argumento
+  
+    // Verifica se a rota 'execute' está presente
+    if (!arguments.execute) {
+        logger.error('A rota "execute" não foi encontrada na requisição');
+    }
+    
+    // Verifica se a rota 'stop' está presente
+    if (!arguments.stop) {
+        logger.error('A rota "stop" não foi encontrada na requisição');
+    }
+    
+    // Verifica se a rota 'test' está presente
+    if (!arguments.test) {
+        logger.error('A rota "test" não foi encontrada na requisição');
+    }
 });
 
 
