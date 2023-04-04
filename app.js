@@ -24,12 +24,12 @@ app.get('/index.html', (req, res) => {
 
 
 // customActivity
-app.post('/customActivity.js', (req, res) => {
-    res.redirect('js/customActivity.js')
+app.get('/customActivity.js', (req, res) => {
+    res.redirect('js/customActivity.js');
 });
 
 // Return JSON
-app.post('/config.json', (req, res) => {
+app.get('/config.json', (req, res) => {
     res.status(200).json(configJSON(req));
 });
 
