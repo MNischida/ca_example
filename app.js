@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.get('/', (req, res) => {
-    return response.json({ message: 'Server is up!' })
+    return res.json({ message: 'Server is up!' })
 })
 
 // customActivity
