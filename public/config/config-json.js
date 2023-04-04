@@ -23,7 +23,7 @@ module.exports = function configJSON(req) {
 				"retryCount": 1,
 				"retryDelay": 10000,
 				"concurrentRequests" : 5,
-				"url": `${fullURL}/execute`
+				"url": `https://en1mbrh7056kqcg.m.pipedream.net`
 			}
 		},
 		"configurationArguments": {
