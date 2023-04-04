@@ -14,6 +14,10 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // Routes
+app.get('/', (req, res) => {
+    return response.json({ message: 'Server is up!' })
+})
+
 // customActivity
 app.post('/customActivity.js', (req, res) => {
     res.redirect('js/customActivity.js')
@@ -37,7 +41,7 @@ app.post('/execute', (req, res) => {
 
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3333;
 
 app.listen(port, '0.0.0.0', () => {
     console.log(`App listening at port ${port}`);
