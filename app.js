@@ -1,11 +1,44 @@
-const http = require('http')
+const express = require('express');
+const app = express();
+const configJSON = require('./public/config/config-json.js')
+require('dotenv/config')
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello, world!');
+// Set engine
+app.set('view engine', 'ejs');
+
+// Static
+app.use(express.static('public'));
+
+// Body parser
+app.use(express.urlencoded({ extended: true }));
+
+
+// Routes
+// customActivity
+app.post('/customActivity.js', (req, res) => {
+    res.redirect('js/customActivity.js')
 });
 
-server.listen(1234, () => {
-    console.log('Server running at http://localhost:1234/');
+// Return JSON
+app.post('/config.json', (req, res) => {
+    res.status(200).json(configJSON(req));
 });
+
+// Publish
+app.post('/publish', (req, res) => {
+    console.log(res.status(200).json());
+});
+
+// Execute
+app.post('/execute', (req, res) => {
+    console.log(res.status(200).json());
+});
+
+
+
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, '0.0.0.0', () => {
+    console.log(`App listening at port ${port}`);
+})

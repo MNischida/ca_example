@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Minha Atividade Personalizada</title>
+  <!-- Inclua o arquivo Postmonger.js no cabeçalho da página -->
+  <script type="text/javascript" src="js/postmonger.js"></script>
+  <script type="text/javascript" src="js/r.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript">
+    (function() {
+      var config = {
+        baseURL: 'js'
+      };
+
+      var dependencies = [
+        'customActivity'
+      ];
+
+      require(config, dependencies);
+    })();
+  </script>
+</head>
+<body>
+  <h1>Minha Atividade Personalizada</h1>
+</body>
+</html>
