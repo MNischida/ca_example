@@ -39,7 +39,7 @@ app.post('/publish', (req, res) => {
 
 // Execute
 app.post('/execute', (req, res) => {
-    console.log(res.status(200).json());
+    console.log(res);
 });
 
 
