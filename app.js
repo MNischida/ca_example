@@ -21,6 +21,8 @@ app.get('/index.html', (req, res) => {
     res.render('./index.ejs')
 })
 
+
+
 // customActivity
 app.post('/customActivity.js', (req, res) => {
     res.redirect('js/customActivity.js')
