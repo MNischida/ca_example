@@ -26,13 +26,13 @@ module.exports = function configJSON(req) {
 				"retryCount": 1,
 				"retryDelay": 10000,
 				"concurrentRequests" : 5,
-				"url": "https://en1mbrh7056kqcg.m.pipedream.net"
+				"url": `${fullURL}/execute`
 			}
 		},
 		"configurationArguments": {
-			"applicationExtensionKey": "teste_ca",
+			"applicationExtensionKey": "ca_example",
 			"publish": {
-				"url": "URI/for/your/activity/publish"
+				"url": `${fullURL}/publish`
 			}
 		},
 		"wizardSteps": [{
