@@ -55,9 +55,10 @@ app.post('/stop', (req, res) => {
 });
 
 // Execute
+/*
 app.post('/execute', (req, res) => {
     console.log(res.status(200).json());
-    /*
+    
     const request = req.body;
     var url = 'https://en1mbrh7056kqcg.m.pipedream.net';
 
@@ -84,9 +85,9 @@ app.post('/execute', (req, res) => {
             console.error(error);
             return res.status(500).json(error);
         })
-    */
+    
 });
-
+*/
 
 
 
