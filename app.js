@@ -71,9 +71,7 @@ app.post('/execute', (req, res) => {
         }
     }
 
-    const payloadAxios = {
-        "variavelTeste": "teste"
-    };
+    const payloadAxios = request.inArguments;
 
     axios    
         .put(url, payloadAxios)
