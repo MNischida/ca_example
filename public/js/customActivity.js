@@ -8,9 +8,17 @@ define([
     var connection = new Postmonger.Session();
     var payload = {};
 
+    var steps = [
+        { label: "Step 1", key: "step1" }
+    ];
+
+    var currentStep = steps[0].key;
+
     $(window).ready(onRender);
 
     connection.on('initActivity', initialize);
+
+    connection.on("clickedNext", onClickedNext);
 
     function onRender() {
         connection.trigger('ready');
@@ -21,6 +29,10 @@ define([
             payload = data;
         }
     }
+
+    function onClickedNext() {
+        save();
+      }
 
     function save() {
         payload["arguments"].execute.inArguments = [{ message: value }];
