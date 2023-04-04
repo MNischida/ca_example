@@ -9,17 +9,14 @@ module.exports = function configJSON(req) {
 		},
 		"type": "Rest",
 		"lang": {
-			"en-US": {
-				"name": "Custom Activity Example",
-				"description": "A custom Journey Builder activity example."
-			}
+			"name": "Custom Activity Example",
+			"description": "A custom Journey Builder activity example."
 		},
 		"arguments": {
 			"execute": {
 				"inArguments": [{
 					"myInArgument": "inArgument coming from iframe",
-					"shortcode": 1234,
-					"template": ""
+					"shortcode": 1234
 				}],
 				"outArguments": [],
 				"timeout": 100000,
@@ -31,9 +28,18 @@ module.exports = function configJSON(req) {
 		},
 		"configurationArguments": {
 			"applicationExtensionKey": "ca_example",
+			"save": {
+				"url": `${fullURL}/save`
+			},
 			"publish": {
 				"url": `${fullURL}/publish`
-			}
+			},
+			"validate": {
+				"url": `${fullURL}/validate`
+			},
+			"stop": {
+				"url": `${fullURL}/stop`
+			},
 		},
 		"wizardSteps": [{
 				"label": "Step 1",
