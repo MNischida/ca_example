@@ -66,7 +66,7 @@ define([
         connection.trigger('requestTriggerEventDefinition');
 
         //requestTriggerDefinition
-        connection.on('requestTriggerEventDefinition', function (eventDefinitionModel) {
+        connection.on('requestedTriggerEventDefinition', function (eventDefinitionModel) {
             eventDefinitionKey = eventDefinitionModel.eventDefinitionKey;
 
             payload['arguments'].execute.inArguments[0].telefone = "{{Event." + eventDefinitionKey + ".\"Telefone\"}}";
