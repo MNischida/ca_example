@@ -71,11 +71,9 @@ app.post('/execute', (req, res) => {
         }
     }
 
-    const payloadAxios = {
-        "resposta": "enviando resposta"
-    };
+    const payloadAxios = request;
 
-    payloadAxios    
+    axios    
         .put(url, payloadAxios)
         .then(resp => {
             return res.status(200).json(resp.data);
