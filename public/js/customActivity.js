@@ -73,8 +73,6 @@ define([
         
             payload['metaData'].isConfigured = true;
             connection.trigger('updateActivity', payload);
-        })
-
-        
+        });
     }
 })
