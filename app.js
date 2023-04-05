@@ -38,7 +38,6 @@ app.post('/publish', (req, res) => {
     console.log(res.status(200).json())
 })
 
-
 const port = process.env.PORT || 3333;
 
 app.listen(port, '0.0.0.0', () => {

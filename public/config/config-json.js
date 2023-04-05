@@ -32,9 +32,14 @@ module.exports = function configJSON(req) {
 				"url": `${fullURL}/publish`
 			}
 		},
-		"wizardSteps": [{
+		"wizardSteps": [
+			{
 				"label": "Step 1",
 				"key": "step1"
+			},
+			{
+				"label": "Step 2",
+				"key": "step2"
 			}
 		],
 		"userInterfaces": {
