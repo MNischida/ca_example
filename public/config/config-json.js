@@ -23,23 +23,14 @@ module.exports = function configJSON(req) {
 				"retryCount": 1,
 				"retryDelay": 10000,
 				"concurrentRequests" : 5,
-				"url": `https://en1mbrh7056kqcg.m.pipedream.net`
+				"url": 'https://en1mbrh7056kqcg.m.pipedream.net'
 			}
 		},
 		"configurationArguments": {
 			"applicationExtensionKey": "ca_example",
-			"save": {
-				"url": `${fullURL}/save`
-			},
 			"publish": {
 				"url": `${fullURL}/publish`
-			},
-			"validate": {
-				"url": `${fullURL}/validate`
-			},
-			"stop": {
-				"url": `${fullURL}/stop`
-			},
+			}
 		},
 		"wizardSteps": [{
 				"label": "Step 1",
