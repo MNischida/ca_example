@@ -48,10 +48,8 @@ define([
         }
 
         var hasInArguments = Boolean(
-            payload["arguments"] &&
-            payload["arguments"].execute &&
-            payload["arguments"].execute.inArguments &&
-            payload["arguments"].execute.inArguments.length > 0
+            payload["arguments"].execute.inArguments[0].field1 ||
+            payload["arguments"].execute.inArguments[0].field2
         );
 
         field1Value = payload['arguments'].execute.inArguments[0].field1;
