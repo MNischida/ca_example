@@ -9,7 +9,7 @@ define([
     var payload = {};
 
     var steps = [
-        { label: "Step 1", key: "step1" }
+        { label: 'Step 1', key: 'step1' }
     ];
 
     var currentStep = steps[0].key;
@@ -17,16 +17,16 @@ define([
     $(window).ready(onRender);
 
     connection.on('initActivity', initialize);
-    connection.on("requestedTokens", onGetTokens);
-    connection.on("requestedEndpoints", onGetEndpoints);
+    connection.on('requestedTokens', onGetTokens);
+    connection.on('requestedEndpoints', onGetEndpoints);
 
-    connection.on("clickedNext", onClickedNext);
+    connection.on('clickedNext', onClickedNext);
 
     function onRender() {
         connection.trigger('ready');
 
-        connection.trigger("requestTokens");
-        connection.trigger("requestEndpoints");
+        connection.trigger('requestTokens');
+        connection.trigger('requestEndpoints');
     }
 
     function initialize(data) {
@@ -35,14 +35,14 @@ define([
         }
 
         var hasInArguments = Boolean(
-            payload["arguments"] &&
-            payload["arguments"].execute &&
-            payload["arguments"].execute.inArguments &&
-            payload["arguments"].execute.inArguments.length > 0
+            payload['arguments'] &&
+            payload['arguments'].execute &&
+            payload['arguments'].execute.inArguments &&
+            payload['arguments'].execute.inArguments.length > 0
         );
       
         var inArguments = hasInArguments
-            ? payload["arguments"].execute.inArguments
+            ? payload['arguments'].execute.inArguments
             : {};
     }
 
@@ -56,12 +56,12 @@ define([
       }
     
       function onGetEndpoints(endpoints) {
-        // Response: endpoints = { restHost: <url> } i.e. "rest.s1.qa1.exacttarget.com"
+        // Response: endpoints = { restHost: <url> } i.e. 'rest.s1.qa1.exacttarget.com'
         // console.log(endpoints);
       }
 
     function save() {
-        payload["metaData"].isConfigured = true;
-        connection.trigger("updateActivity", payload);
+        payload['metaData'].isConfigured = true;
+        connection.trigger('updateActivity', payload);
     }
 })
