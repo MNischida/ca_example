@@ -9,7 +9,8 @@ define([
     var payload = {};
 
     var steps = [
-        { label: 'Step 1', key: 'step1' }
+        { label: 'Step 1', key: 'step1' },
+        { label: 'Step 2', key: 'step2' }
     ];
 
     var currentStep = steps[0].key;
@@ -96,7 +97,7 @@ define([
                 });
                 break;
             case 'step2':
-                $('$step2').show();
+                $('#step2').show();
                 connection.trigger('updateButton', {
                     button: 'back',
                     enabled: true
