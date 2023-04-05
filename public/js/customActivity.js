@@ -47,7 +47,7 @@ define([
             payload = data;
         }
 
-        $('#field1').val(payload);
+        $('#field1').val(payload['arguments']);
 
         var step1 = getField();
 
