@@ -41,7 +41,7 @@ define([
             payload = data;
         }
 
-        var step1 = $('#step1').val();
+        var step1 = getField();
 
         if (!step1) {
             showStep(null, 1);
