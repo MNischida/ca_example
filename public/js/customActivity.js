@@ -69,7 +69,7 @@ define([
         connection.on('requestedTriggerEventDefinition', function (eventDefinitionModel) {
             eventDefinitionKey = eventDefinitionModel.eventDefinitionKey;
 
-            payload['arguments'].execute.inArguments[0].telefone = "{{Event." + eventDefinitionKey + ".\"Telefone\"}}";
+            payload['arguments'].execute.inArguments[0].telefone = "{{Event." + eventDefinitionKey + ".Telefone}}";
         
             payload['metaData'].isConfigured = true;
             connection.trigger('updateActivity', payload);

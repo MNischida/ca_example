@@ -54,13 +54,7 @@ module.exports = function configJSON(req) {
 		"schema": {
 			"arguments": {
 				"execute": {
-					"inArguments": [{
-						"myInArgument": {
-							"dataType": "text",
-							"isNullable": false,
-							"direction": "in"
-						}
-					}],
+					"inArguments": [],
 					"outArguments": []
 				}
 			}
