@@ -32,7 +32,8 @@ define([
 
         connection.trigger('updateButton', {
             button: 'next',
-            enabled: Boolean(getField())
+            enabled: true
+            //enabled: Boolean(getField())
         });
     }
 
@@ -44,13 +45,13 @@ define([
         var step1 = getField();
 
         if (!step1) {
-            showStep(null, 1);
+            showStep(null, 0);
             connection.trigger('updateButton', {
                 button: 'next',
                 enabled: false
             })
         } else {
-            showStep(null, 2);
+            showStep(null, 1);
         }
     }
 
