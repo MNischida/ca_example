@@ -30,11 +30,13 @@ define([
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
 
-        connection.trigger('updateButton', {
-            button: 'next',
-            enabled: true
-            //enabled: Boolean(getField())
-        });
+
+        $('#field1').change(function () {
+            connection.trigger('updateButton', {
+                button: 'next',
+                enabled: Boolean(getField())
+            });
+        })
     }
 
     function initialize(data) {
@@ -45,13 +47,13 @@ define([
         var step1 = getField();
 
         if (!step1) {
-            showStep(null, 0);
+            showStep(null, 1);
             connection.trigger('updateButton', {
                 button: 'next',
                 enabled: false
             })
         } else {
-            showStep(null, 1);
+            showStep(null, 2);
         }
     }
 
