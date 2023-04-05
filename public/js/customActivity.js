@@ -47,11 +47,11 @@ define([
             payload = data;
         }
 
-        $('#field1').val('123');
+        $('#field1').val(payload);
 
         var step1 = getField();
 
-        if (!step1) {
+        if (step1) {
             showStep(null, 1);
             connection.trigger('updateButton', {
                 button: 'next',
