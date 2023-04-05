@@ -50,8 +50,8 @@ define([
         field1Value = payload['arguments'].execute.inArguments[0].field1;
         field2Value = payload['arguments'].execute.inArguments[0].field2;
 
-        $('#field1').val() = field1Value;
-        $('#field2').val() = field2Value;
+        $('#field1').val('123');
+        $('#field2').val(field1Value);
 
         var step1 = getField();
 
