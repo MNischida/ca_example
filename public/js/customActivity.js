@@ -38,11 +38,28 @@ define([
                 enabled: Boolean(getField())
             });
         })
+
+
     }
 
     function initialize(data) {
         if (data) {
             payload = data;
+        }
+
+        var hasInArguments = Boolean(
+            payload["arguments"] &&
+            payload["arguments"].execute &&
+            payload["arguments"].execute.inArguments &&
+            payload["arguments"].execute.inArguments.length > 0
+        );
+
+        field1Value = payload['arguments'].execute.inArguments[0].field1;
+        field2Value = payload['arguments'].execute.inArguments[0].field2;
+
+        if (hasInArguments) {
+            $('#field1').val(field1Value);
+            $('#field2').val(field2Value);
         }
 
         var step1 = getField();
