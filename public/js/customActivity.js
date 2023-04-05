@@ -60,9 +60,7 @@ define([
         // console.log(endpoints);
       }
 
-    function save() {
-        payload['arguments'].execute.inArguments[0].telefone = "11985677740";
-        
+    function save() {        
         payload['metaData'].isConfigured = true;
         connection.trigger('updateActivity', payload);
     }
