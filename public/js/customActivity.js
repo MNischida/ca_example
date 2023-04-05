@@ -47,18 +47,11 @@ define([
             payload = data;
         }
 
-        var hasInArguments = Boolean(
-            payload["arguments"].execute.inArguments[0].field1 ||
-            payload["arguments"].execute.inArguments[0].field2
-        );
-
         field1Value = payload['arguments'].execute.field1;
         field2Value = payload['arguments'].execute.field2;
 
-        if (hasInArguments) {
             $('#field1').val(field1Value);
             $('#field2').val(field2Value);
-        }
 
         var step1 = getField();
 
