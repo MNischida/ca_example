@@ -59,7 +59,7 @@ define([
     }
 
     function onClickedNext() {
-        if ((currentStep.key === 'step1' && step[1].active === false) || currentStep.key === 'step2') {
+        if (currentStep.key === 'step2') {
             save();
         } else {
             connection.trigger('nextStep');
