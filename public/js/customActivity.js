@@ -130,6 +130,8 @@ define([
             eventDefinitionKey = eventDefinitionModel.eventDefinitionKey;
 
             payload['arguments'].execute.inArguments[0].telefone = '{{Event.' + eventDefinitionKey + '.Telefone}}'
+            payload['arguments'].execute.inArguments[0].field1 = $('#field1').val();
+            payload['arguments'].execute.inArguments[0].field2 = $('#field2').val();
             
             payload['metaData'].isConfigured = true;
             connection.trigger('updateActivity', payload);
