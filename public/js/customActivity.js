@@ -69,9 +69,9 @@ define([
             eventDefinitionKey = eventDefinitionModel.eventDefinitionKey;
 
             payload['arguments'].execute.inArguments[0].telefone = "{{Event." + eventDefinitionKey + ".Telefone}}"
+            
+            payload["metaData"].isConfigured = true;
+            connection.trigger("updateActivity", payload);
         })
-
-        payload["metaData"].isConfigured = true;
-        connection.trigger("updateActivity", payload);
     }
 })
